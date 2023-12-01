@@ -21,19 +21,9 @@ set(CPP_DEBUG_FLAGS -Wall -Wextra -pedantic -ggdb)
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
-add_executable(main
-  ${SRC_DIR}/main.cpp
-)
 
-add_subdirectory(${SRC_DIR}/my_math)
 
-target_link_libraries(main
-  PRIVATE my_math
-)
-
-target_compile_options(main
-  PRIVATE ${CPP_DEBUG_FLAGS}
-)
+add_subdirectory(${SRC_DIR}/)
 
 # Firstly It is a good practice to enable the testing
 # With cmake prepares to run with ctest
