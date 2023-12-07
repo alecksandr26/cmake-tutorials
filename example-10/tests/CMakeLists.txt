@@ -71,7 +71,7 @@ target_compile_options(test_regression
 
 include(GoogleTest)
 
-# # Here we add the tests to google tests
+# Here we add the tests to google tests
 gtest_discover_tests(test_mse)
 gtest_discover_tests(test_utils)
 gtest_discover_tests(test_regression)
